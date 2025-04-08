@@ -29,5 +29,5 @@ jobs:
           --http-header "Origin=$ORIGIN_HEADER" \
           "$INPUT_URL" best --stdout | \
           ffmpeg -re -i - \
-          -vf "drawtext=text='TipiStream':fontcolor=white:fontsize=24:x=100:y=100" \
+          -vf "drawtext=text='TipiStream':fontcolor=white:fontsize=24:x=180:y=180" \
           -c:v libx264 -preset veryfast -c:a aac -b:a 64k -f flv "$RTMP_URL"
